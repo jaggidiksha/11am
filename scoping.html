@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="para">hello welcome to the html page </p>
+    <button onclick='document.getElementById("para").innerHTML="heyy this is javascript working "'>update text</button> -->
+
+    <form action="">
+    <label for="first number"> first number</label>
+    <input type="number" id="first"><br>
+    <label for="second number">second number</label>
+    <input type="number" id="second"><br>
+    </form>
+    <button onclick="same()">check values</button>
+    <script>
+
+        function same(){
+            let a=  document.getElementById("first").value
+             let b=document.getElementById("second").value
+
+             if(a==b){
+                document.write("both values are same")
+             }else{
+                document.write("both values are different")
+             }
+        }
+//   let f=1;
+//   for (let i=1;i<=5;i++){
+//     f*=i
+//   }
+//   document.write(f)
+
+//global scoping: the variables declared outside of the function are called global variables  and the concept is called global scoping ,the global variables can be accessed locally also
+
+// let a="john";
+
+//local scoping:the variabels declared inside the function are called local variables and the comcept is called local scoping, local variables can not be accessed globally
+
+// function abc(){
+//     let y="eirc"
+//     document.write(y+"<br>")
+//     document.write(a+"<br>")
+// }
+// abc()
+//lexical scoping /closures: es6 , arrow functions
+//closure in action says that we have two functions one is innerfunction and the other one is outerfunction , the innerfunction can have the acess to the outerfution variables as well as parameters
+//arrow function 
+//syntax:
+// const functionanme=()=>{
+//     //statement
+// }
+// functionanme()
+
+
+// const outerfun=(b)=>{
+// let a=98;
+//     const innerfun=()=>{
+//   let sum=a+b
+//   console.log(`the sum of two numbers is ${sum}`)
+//     }
+//     innerfun()
+// }
+// outerfun(10)
+// the sum of two numbers is 108
+//the sum of two numbers is : string
+//108: sum: expression
+//string+expression: template literals / backticks
+//string interpolation:${expressioname}
+
+
+
+
+
+
+//dom: document object model
+//dom is atechnology with the help of which we can completely control any html document with the help of javascript , we can control / manipulate any id , class, tag any attribute
+
+//real dom 
+//virtual dom 
+
+
+// document.getElementById("")
+// document.getElementById("").innerHTML
+// document.getElementById("").value 
+// document.getElementById("").textContent
+
+//event listeners : which listenes for some particular event 
+//onclick
+//onsumbit
+//onchange 
+
+    </script>
+</body>
+</html>
