@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <form action="">
+            <label>first number</label>
+            <input type="number" id="first"><br><br>
+            <label>second number</label>
+            <input type="number" id="second"><br><br>
+        </form>
+        <button onclick="add()">+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>
+   <div style="text-align: center;">
+    <h1>STUDENT FORM</h1>
+    <form action="" id="studentform">
+        <label>Name</label>
+        <input type="text" id="name"><br><br>
+        <label>Surname</label>
+        <input type="text" id="surname"><br><br>
+        <label>Father name</label>
+        <input type="tel" id="father"><br><br>
+        <label>Age</label>
+        <input type="number" id="age"><br><br>
+        <label>Address</label>
+        <input type="text" id="address"><br><br>
+        <label>Email</label>
+        <input type="text" id="email"><br><br>
+        <label>Mobile number</label>
+        <input type="tel" id="number"><br><br>
+        <label>Date</label>
+        <input type="tel" id="date"><br><br>
+        <label>Time</label>
+        <input type="tel" id="time"><br><br>
+<input type="submit">
+    </form>
+   </div>
+   <script>
+  function add(){
+   let a= parseInt(document.getElementById("first").value)
+   let b= parseInt(document.getElementById("second").value)
+   document.write(a+b)
+  }
+
+   let form= document.getElementById("studentform")
+
+   form.addEventListener("submit",function(e){
+    e.preventDefault();
+
+let name=document.getElementById("name").value
+console.log("name:",name)
+   })
+
+
+   //parseInt:it parses a string and returns an integer
+   //parse: when we resolve a sentence into its componets 
+
+   //syntax: parseInt(string,radix)
+   //radix: it specify which numerical system to be used, it is optional to write so generally we neglect it
+
+   // only the first value of the string is returned using parseInt function
+
+//    let num="he was 50 years old"
+//    let b=parseInt(num)
+// document.write(b)
+   </script>
+</body>
+</html>
