@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //  const obj={
+    //   name:"eric",
+    //   occupation:"developer"
+  
+    //  }
+    //  document.write(obj.name)
+    //  document.write(obj.occupation)
+    //  document.write(JSON.stringify(obj))
+        // var emp=new Object();
+        // emp.id=101;
+        // emp.name="diksha";
+        // emp.salary=50000;
+        // document.write(emp.id+" "+emp.name+" "+emp.salary)
+
+        function emp(id,name,salary){
+            this.id=id;
+            this.name=name;
+            this.salary=salary
+        }
+      var e=  new emp(103,"john",69007)
+      document.write(e.id,e.name,e.salary)
+
+
+     
+
+      // var a={
+      //   name:"eric",
+      //   id:775,
+      //   salary:98760
+      // }
+      // document.write(a)
+
+
+      //Prototypes
+// In JavaScript, every object has an internal property called [[Prototype]], which is a reference to another object. This other object is called the prototype. The prototype is itself an object that can have its own prototype, forming a chain known as the prototype chain.
+
+// When you try to access a property or method on an object, JavaScript first looks for the property directly on that object. If it doesn't find the property there, it then looks at the object's prototype, and continues up the prototype chain until it either finds the property or reaches the end of the chain (which is typically Object.prototype).
+
+// Prototypal Inheritance
+// Prototypal inheritance is a feature in JavaScript that allows objects to inherit properties and methods from other objects. This is different from classical inheritance (as seen in languages like Java or C++), where classes inherit from other classes.
+
+// In JavaScript, inheritance is achieved by linking an object to a prototype object. Here's a simple example:
+
+
+// Create a prototype object
+const personPrototype = {
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+
+// Create a new object that inherits from personPrototype
+const person = Object.create(personPrototype);
+person.name = 'Alice';
+person.greet(); // Output: Hello, my name is Alice
+//personPrototype is an object with a greet method.
+// person is an object that is created using Object.create(personPrototype), so it inherits the greet method from personPrototype.
+// Even though person does not directly have a greet method, it can still call greet because of prototypal inheritance.
+
+
+
+
+    </script>
+    
+</body>
+</html>
